@@ -1,0 +1,68 @@
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML and Python</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+*{
+    color: darkslategrey;
+    font-size: 30px;
+    font-family: 'poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.menu{
+    background-color:cornflowerblue;
+    width: 100%;
+    margin:auto;
+}
+nav h2{
+    float: left;
+}
+nav{
+    height: 100px;
+    line-height: 100px;
+}
+nav ul{
+    float: right;
+}
+
+nav ul li{
+    display: inline-block;
+    margin: 0 30px 0 30px;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+}
+
+nav ul li a{
+  text-decoration: none;
+  color: lemonchiffon;
+  font-size: 20px;
+}
+
+nav ul li :hover{
+  color:darkslategrey;
+}
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <nav>
+            <h2>Home<span style="color: lemonchiffon;">Inspire</span></h2>
+            <ul>
+                <li><a href="#">Home Decor</a></li>
+                <li><a href="#">Kitchen</a></li>                
+                <li><a href="#">Bedroom</a></li>                
+                <li><a href="#">Art</a></li>                
+                <li><a href="#">Accessories</a></li>
+            </ul>
+        </nav>
+    </div>
+</body>
+</html>
+{% endblock %}
