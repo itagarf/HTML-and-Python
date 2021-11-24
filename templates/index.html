@@ -11,7 +11,7 @@
 
 *{
     color: darkslategrey;
-    font-size: 30px;
+    font-size: 20px;
     font-family: 'poppins', sans-serif;
     margin: 0;
     padding: 0;
@@ -24,6 +24,7 @@
 }
 nav h2{
     float: left;
+    font-size: 30px;
 }
 nav{
     height: 100px;
@@ -49,13 +50,87 @@ nav ul li a{
 nav ul li :hover{
   color:darkslategrey;
 }
+.homeDecorBox{
+    position: absolute;
+    width: 80%;
+    left: 7%;
+}
+.homeDecor{
+    position:static;
+    width: 90%;
+}
+.homeDecor img{
+    width: 900px;
+    height: 500px;
+}
+.mobileNavBtn{
+  color: navy;
+  font-size: 25px;
+  cursor: pointer;
+  float: right;
+  display: none;
+}
+
+#mobileNav{
+  display: none;
+}
+@media screen and (max-width: 992px){
+    nav{
+    padding:0px 30px;
+  }
+  .mobileNavBtn{
+    display: block;
+  }
+  nav .menuBar h2{
+    font-size: 25px;
+    float: left;
+  }
+  nav ul{
+    width: 70%;
+    height: 60vh;
+    background-color:cornflowerblue;
+    position: fixed;
+    left: -100%;
+    transition: 0.3s ease;
+    top: 75px;
+    text-align: center;
+  }
+  nav ul li{
+    display: block;
+    margin: 50px 0px;
+    line-height: 20px;
+  }
+  #mobileNav:checked ~ ul{
+    left:0;
+  }
+.homeDecorBox{
+    display: block;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: calc(100% - 15vw);
+}
+.homeDecor{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.homeDecor img{
+    display: block;
+    height: 270px;
+    width: 100%;
+}
+}
     </style>
 </head>
 <body>
     <header>
         <div class="menu">
             <nav>
-                <h2>Home<span style="color: lemonchiffon;">Inspire</span></h2>
+                <h2>Home<span style="color: lemonchiffon; font-size: 30px;">Inspire</span></h2>
+                <input type="checkbox" id="mobileNav">
+              <label for="mobileNav" class="mobileNavBtn">
+                <i class="fas fa-bars"></i>
+              </label>
                 <ul>
                     <li><a href="#">Home Decor</a></li>
                     <li><a href="#">Kitchen</a></li>                
@@ -66,5 +141,21 @@ nav ul li :hover{
             </nav>
         </div>
     </header>
+    <div class="homeDecorBox">
+        <div class="homeDecor">
+            <p>You might want a classy space with few decorations, a side stool, and the plants around.</p>
+            <img src="images/home deco.jpg"></div>
+        <div class="homeDecor">
+            <img src="images/home deco2.jpg">
+            <p>A crowded space can also be beautiful when arranged in the best form it needs to catch the eye.</p>
+        </div>
+        <div class="homeDecor">
+            <p>Woodwork can also be beautiful in the house. From the walls to furniture, there's a warm feel it sprends out.</p>
+            <img src="images/home deco3.jpg"></div>
+        <div class="homeDecor">
+            <img src="images/home deco4.jpg">
+            <p>It looks like a storage space with the amount of items here, but the decorations gives off a living space. Nice to behold.</p>
+        </div>
+    </div>
 </body>
 </html>
