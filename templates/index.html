@@ -8,19 +8,21 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Pacifico&display=swap');
 
 *{
     color: darkslategrey;
-    font-size: 17px;
+    font-size: 20px;
     font-family: 'poppins', sans-serif;
     margin: 0;
     padding: 0;
+    background-color: cornflowerblue;
 }
 
 .menu{
-    background-color:cornflowerblue;
     width: 100%;
     margin:auto;
+    padding-bottom: 30px;
 }
 nav h2{
     float: left;
@@ -51,12 +53,8 @@ nav ul li :hover{
   color:darkslategrey;
 }
 .homeDecorBox{
-    position: absolute;
+    position: static;
     width: 90%;
-    left: -10%;
-}
-.homeDecor{
-    width: 100%;
 }
 .mobileNavBtn{
   color: navy;
@@ -69,6 +67,32 @@ nav ul li :hover{
 #mobileNav{
   display: none;
 }
+
+.inspireBox{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+}
+.inspire{
+    width: 50%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.inspire p{
+    font-family: 'Pacifico';
+    font-size: 25px;
+}
+.inspireIcons i{
+  font-size: 40px;
+}
+.inspire button{
+    background-color: darkslategrey;
+    color: lemonchiffon;
+    border-radius: 40%;
+    padding: 20px;
+}
 @media screen and (max-width: 992px){
     nav{
     padding:0px 30px;
@@ -77,13 +101,13 @@ nav ul li :hover{
     display: block;
   }
   nav .menuBar h2{
-    font-size: 25px;
+    font-size: 20px;
     float: left;
   }
   nav ul{
     width: 70%;
-    height: 60vh;
-    background-color:cornflowerblue;
+    height: 50vh;
+    background-color:darkslategrey;
     position: fixed;
     left: -100%;
     transition: 0.3s ease;
@@ -94,21 +118,26 @@ nav ul li :hover{
     display: block;
     margin: 50px 0px;
     line-height: 20px;
+    background-color: darkslategrey
+  }
+  nav ul li a{
+    background-color: darkslategrey;
   }
   #mobileNav:checked ~ ul{
     left:0;
   }
-.homeDecorBox{
-    display: block;
-    align-items: center;
-    flex-wrap: nowrap;
-    width: calc(100% - 15vw);
-}
-.homeDecor{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
+  .inspireBox{
+        width: calc(100% - 10vw);
+        display: block;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-items: center;
+    }
+    .inspire{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+    }
 }
     </style>
 </head>
@@ -131,16 +160,18 @@ nav ul li :hover{
             </nav>
         </div>
     </header>
-    <div class="homeDecoBox">
-        <div class="homeDecor">
-            <p>Home decoration refers to the aesthetic components used to make a home more attractive and visually appealing. Home decor is inclusive of physical items and objects (furniture, art, and accessories), placement of physical items and objects, and room colors and materials (flooring, wall coverings, window coverings, and ceilings).</p>
+    <div class="inspireBox">
+        <div class="inspire">
+            <p>The appearnce of an item is what makes it home decor. You might want a classy space with few decorations, a side stool, and the plants around. A crowded space can also be beautiful when arranged in the best form it needs to catch the eye.</p>
+            <p>Woodwork can also be beautiful in the house. From the walls to furniture, there's a warm feel it sprends out. There miht be a room with the look of a storage space, but the decorations gives off a living space.</p>
         </div>
-        <div class="homeDecor">
-            <p>Home decor items do not have to have a practical use. The appearance of an item is what makes it part of your home décor. It might also be useful in a practical sense, but it’s not necessary for it to be. For example, a wall hanging that was chosen for its appearance is home décor.</p>
-        </div>    
-        <div class="homeDecor">
-            <p>You might want a classy space with few decorations, a side stool, and the plants around. A crowded space can also be beautiful when arranged in the best form it needs to catch the eye.</p>
-            <p>Woodwork can also be beautiful in the house. From the walls to furniture, there's a warm feel it sprends out. There might be a room with the look of a storage space, but the decorations gives off a living space.</p>
+        <div class="inspire">
+            <button class="shop"> Shop Now</button><br>
+            <div class="inspireIcons">
+            <a href=""><i class="fab fa-facebook"></i></a>
+            <a href=""><i class="fab fa-instagram"></i></a>
+            <a href=""><i class="fab fa-twitter"></i></a>
+            </div>
         </div>
     </div>
 </body>
