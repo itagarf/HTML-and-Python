@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Pacifico&display=swap');
+
+*{
+    color: rgb(28, 51, 51);
+    font-size: 17px;
+    font-family: 'poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(189, 207, 240);
+}
+
+.menu{
+    width: 100%;
+    margin:auto;
+    padding-bottom: 30px;
+}
+nav h2{
+    float: left;
+    font-size: 30px;
+}
+nav{
+    height: 100px;
+    line-height: 100px;
+}
+nav ul{
+    float: right;
+}
+
+nav ul li{
+    display: inline-block;
+    margin: 0 30px 0 30px;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+}
+
+nav ul li a{
+  text-decoration: none;
+  color: rgb(169, 163, 107);
+  font-size: 17px;
+}
+
+nav ul li :hover{
+  color:darkslategrey;
+}
+.homeDecorBox{
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 90%;
+}
+.mobileNavBtn{
+  color: navy;
+  font-size: 20px;
+  cursor: pointer;
+  float: right;
+  display: none;
+}
+
+#mobileNav{
+  display: none;
+}
+
+.inspireBox{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+}
+.inspire{
+    width: 50%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.inspire p{
+    font-family: 'Poppins';
+    font-size: 17px;
+}
+.inspireIcons i{
+  font-size: 30px;
+}
+.inspire button{
+    background-color: darkslategrey;
+    color: lemonchiffon;
+    border-radius: 40%;
+    padding: 20px;
+}
+@media screen and (max-width: 992px){
+    nav{
+    padding:0px 30px;
+  }
+  .mobileNavBtn{
+    display: block;
+  }
+  nav .menuBar h2{
+    font-size: 20px;
+    float: left;
+  }
+  nav ul{
+    width: 70%;
+    height: 50vh;
+    background-color:darkslategrey;
+    position: fixed;
+    left: -100%;
+    transition: 0.3s ease;
+    top: 75px;
+    text-align: center;
+  }
+  nav ul li{
+    display: block;
+    margin: 50px 0px;
+    line-height: 20px;
+    background-color: darkslategrey
+  }
+  nav ul li a{
+    background-color: darkslategrey;
+  }
+  #mobileNav:checked ~ ul{
+    left:0;
+  }
+  .inspireBox{
+        width: calc(100% - 10vw);
+        display: block;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-items: center;
+    }
+    .inspire{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+    }
+}
